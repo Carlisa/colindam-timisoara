@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Înscriere | Împreună colindăm Timișoara</title>
+        <meta name="application-name" content="Împreună colindăm Timișoara">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Control the behavior of search engine crawling and indexing -->
+        <meta name="robots" content="index,follow,noodp"><!-- All Search Engines -->
+        <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+        <meta name="description" content="Împreună colindăm Timișoara">
+        <meta name="author" content="Bloggify">
+        <meta name="google" content="nositelinkssearchbox">
+        <meta name="subject" content="Împreună colindăm Timișoara">
+        <meta name="abstract" content="Împreună colindăm Timișoara">
+        <meta name="url" content="http://localhost:8080">
+        <meta name="directory" content="submission">
+        <meta name="rating" content="General">
+        <!-- Facebook -->
+        <meta property="og:url" content="http://localhost/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Înscriere">
+        
+        
+        <meta property="og:site_name" content="Împreună colindăm Timișoara">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:description" content="Împreună colindăm Timișoara">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        
+            <meta name="twitter:site" content="Bloggify">
+        
+        <meta name="twitter:url" content="http://localhost/">
+        <meta name="twitter:title" content="Înscriere">
+        <meta name="twitter:description" content="Împreună colindăm Timișoara">
+        <!-- Google -->
+        <link href="https://plus.google.com/+YourPage" rel="publisher">
+        <meta itemprop="name" content="Înscriere">
+        <meta itemprop="description" content="Împreună colindăm Timișoara">
+        <!-- Scripts -->
+        <script src="/!/bloggify/theme/assets/js/jquery.min.js"></script>
+        <script src="/!/bloggify/theme/assets/js/skel.min.js"></script>
+        <script src="/!/bloggify/theme/assets/js/util.js"></script>
+        <script src="/!/bloggify/theme/assets/js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.5.1/parsley.min.js"></script>
+        <script src="/!/bloggify/public/js/main.js"></script>
+        <link rel="stylesheet" href="/!/bloggify/theme/assets/css/main.css" />
+        <link rel="stylesheet" href="/!/bloggify/public/css/style.css" />
+        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    </head>
+    <body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="/" class="logo">Împreună colindăm Timișoara</a>
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+            </ul>
+        </header>
+        <!-- Content -->
+        <section>
+            <header class="main">
+                <h1>Înscriere</h1>
+            </header>
+            
+            <form data-form="signup">
+    <div class="row uniform">
+        <div class="12u">
+            <input type="text" name="church" value="" placeholder="Nume biserică" required/>
+        </div>
+        <div class="12u">
+            <input type="text" name="admin" value="" placeholder="Nume reprezentant" required/>
+        </div>
+    </div>
+    <div class="row uniform">
+        <div class="12u">
+            <input type="email" name="email" value="" placeholder="Email" required/>
+        </div>
+        <div class="12u">
+            <input type="password" name="password" value="" placeholder="Parolă" required minlength="6"/>
+        </div>
+    </div>
+    <div class="row uniform">
+        <!-- Break -->
+        <div class="12u$">
+            <ul class="actions">
+                <li><input type="submit" value="Înregistrare" class="special" /></li>
+                <li><input type="reset" value="Resetează" /></li>
+            </ul>
+        </div>
+    </div>
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.5.1/parsley.min.js"></script>
+
+<script>
+$(function () {
+    $("form").parsley().on("form:submit", function () {
+        return false;
+    });
+});
+
+Parsley.addMessages('ro', {
+  defaultMessage: "Acest câmp nu este completat corect.",
+  type: {
+    email:        "Trebuie să scrii un email valid.",
+    url:          "Trebuie să scrii un link valid",
+    number:       "Trebuie să scrii un număr valid",
+    integer:      "Trebuie să scrii un număr întreg valid",
+    digits:       "Trebuie să conțină doar cifre.",
+    alphanum:     "Trebuie să conțină doar cifre sau litere."
+  },
+  notblank:       "Acest câmp nu poate fi lăsat gol.",
+  required:       "Acest câmp trebuie să fie completat.",
+  pattern:        "Acest câmp nu este completat corect.",
+  min:            "Trebuie să fie ceva mai mare sau egal cu %s.",
+  max:            "Trebuie să fie ceva mai mic sau egal cu %s.",
+  range:          "Valoarea trebuie să fie între %s și %s.",
+  minlength:      "Trebuie să scrii cel puțin %s caractere.",
+  maxlength:      "Trebuie să scrii cel mult %s caractere.",
+  length:         "Trebuie să scrii cel puțin %s și %s cel mult %s caractere.",
+  mincheck:       "Trebuie să alegi cel puțin %s opțiuni.",
+  maxcheck:       "Poți alege maxim %s opțiuni.",
+  check:          "Trebuie să alegi între %s sau %s.",
+  equalto:        "Trebuie să fie la fel."
+});
+Parsley.setLocale('ro');
+</script>
+
+<p><style
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6;
+}</p>
+
+<p>input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border: 1px solid #EED3D7;
+}</p>
+
+<p>.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;</p>
+
+<p>transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}</p>
+
+<p>.parsley-errors-list.filled {
+  opacity: 1;
+  }
+</style></p>
+        </section>
+    </div>
+</div>
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="inner">
+        <!-- Menu -->
+        <nav id="menu">
+    <header class="major">
+        <h2>Meniu</h2>
+    </header>
+    <ul>
+        
+            
+                
+            
+                
+                    <li>
+                        <a href="/">
+                            Înscriere
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/informatii">
+                            Informații
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/implicare">
+                            Implică-te
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/contact">
+                            Colinde
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/stiri">
+                            Știri
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/statistici">
+                            Biserici Înscrise
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/colinde">
+                            Colinde
+                        </a>
+                    </li>
+                
+            
+        
+    </ul>
+</nav>
+
+        <!-- Contact -->
+        
+<section>
+    <header class="major">
+        <h2>Contact</h2>
+    </header>
+    <p>Ne puteți contacta la adresele de mai jos:</p>
+    <ul class="contact">
+        <li class="fa-envelope-o"><a href="foo@bar.com">foo@bar.com</a></li>
+        <li class="fa-phone">123234345</li>
+        <li class="fa-home">foo</li>
+    </ul>
+</section>
+
+
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">Powered by <a href="https://bloggify.org">Bloggify</a>.
+                        Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
